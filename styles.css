@@ -1,0 +1,19 @@
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #FFF9F5; }
+::-webkit-scrollbar-thumb { background: #FFB5A7; border-radius: 5px; border: 2px solid #FFF9F5; }
+
+@media (hover: hover) and (pointer: fine) {
+    body { cursor: none; }
+}
+
+.grid-bg {
+    background-color: #FFF9F5;
+    background-image: linear-gradient(#FCD5CE 1px, transparent 1px), 
+                      linear-gradient(90deg, #FCD5CE 1px, transparent 1px);
+    background-size: 30px 30px;
+}
+
+.blob-shape { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+
+html { scroll-behavior: smooth; }

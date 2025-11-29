@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navagation | Your Learning Guide</title>
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600&family=Quicksand:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        paper: '#FFF9F5',
+                        ink: '#4A3B32',
+                        peach: '#FFB5A7',
+                        apricot: '#FCD5CE',
+                        mint: '#B0EACD',
+                        sage: '#81B29A',
+                        rose: '#FEC5BB',
+                    },
+                    fontFamily: {
+                        sans: ['Quicksand', 'sans-serif'],
+                        display: ['Fredoka', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'soft': '4px 4px 0px 0px rgba(255, 181, 167, 0.4)',
+                        'stamped': '4px 4px 0px 0px #4A3B32',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-paper text-ink antialiased selection:bg-mint selection:text-ink overflow-x-hidden font-sans">
+    <div id="root"></div>
+    <script type="text/babel" src="main.js"></script>
+</body>
+</html>
