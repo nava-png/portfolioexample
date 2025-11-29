@@ -4,30 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navagation | Your Learning Guide</title>
+    
+    <!-- React & ReactDOM -->
+    <script src="[https://unpkg.com/react@18/umd/react.development.js](https://unpkg.com/react@18/umd/react.development.js)" crossorigin></script>
+    <script src="[https://unpkg.com/react-dom@18/umd/react-dom.development.js](https://unpkg.com/react-dom@18/umd/react-dom.development.js)" crossorigin></script>
+    
+    <!-- Babel for JSX -->
+    <script src="[https://unpkg.com/@babel/standalone/babel.min.js](https://unpkg.com/@babel/standalone/babel.min.js)"></script>
+    
+    <!-- Tailwind CSS -->
+    <script src="[https://cdn.tailwindcss.com](https://cdn.tailwindcss.com)"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="[https://fonts.googleapis.com](https://fonts.googleapis.com)">
+    <link rel="preconnect" href="[https://fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
+    <link href="[https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600&family=Quicksand:wght@300;400;600;700&display=swap](https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600&family=Quicksand:wght@300;400;600;700&display=swap)" rel="stylesheet">
 
-    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600&family=Quicksand:wght@300;400;600;700&display=swap" rel="stylesheet">
-
+    <!-- External CSS -->
     <link rel="stylesheet" href="styles.css">
 
+    <!-- Tailwind Config -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        paper: '#FFF9F5',
-                        ink: '#4A3B32',
-                        peach: '#FFB5A7',
-                        apricot: '#FCD5CE',
-                        mint: '#B0EACD',
-                        sage: '#81B29A',
-                        rose: '#FEC5BB',
+                        paper: '#FFF9F5', // Very light cream
+                        ink: '#4A3B32', // Dark brown for text
+                        peach: '#FFB5A7', // Soft orange/pink
+                        apricot: '#FCD5CE', // Lighter orange
+                        mint: '#B0EACD', // Soft Green
+                        sage: '#81B29A', // Darker Green
+                        rose: '#FEC5BB', // Pink
                     },
                     fontFamily: {
                         sans: ['Quicksand', 'sans-serif'],
@@ -36,6 +44,16 @@
                     boxShadow: {
                         'soft': '4px 4px 0px 0px rgba(255, 181, 167, 0.4)',
                         'stamped': '4px 4px 0px 0px #4A3B32',
+                    },
+                    animation: {
+                        'float': 'float 3s ease-in-out infinite',
+                        'bounce-slow': 'bounce 2s infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
                     }
                 }
             }
@@ -43,7 +61,50 @@
     </script>
 </head>
 <body class="bg-paper text-ink antialiased selection:bg-mint selection:text-ink overflow-x-hidden font-sans">
+
     <div id="root"></div>
+
+    <!-- External JavaScript -->
     <script type="text/babel" src="main.js"></script>
 </body>
 </html>
+
+
+2. styles.css
+
+Save this code as styles.css.
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #FFF9F5;
+}
+::-webkit-scrollbar-thumb {
+    background: #FFB5A7;
+    border-radius: 5px;
+    border: 2px solid #FFF9F5;
+}
+
+/* Hide default cursor only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+    body {
+        cursor: none;
+    }
+}
+
+/* Notebook Grid Background */
+.grid-bg {
+    background-color: #FFF9F5;
+    background-image: linear-gradient(#FCD5CE 1px, transparent 1px), linear-gradient(90deg, #FCD5CE 1px, transparent 1px);
+    background-size: 30px 30px;
+}
+
+.blob-shape {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
