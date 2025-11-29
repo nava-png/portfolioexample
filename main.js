@@ -1,2 +1,33 @@
-// main.js full code too long; placeholder created.
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #FFF9F5;
+}
+::-webkit-scrollbar-thumb {
+    background: #FFB5A7;
+    border-radius: 5px;
+    border: 2px solid #FFF9F5;
+}
+
+/* Hide default cursor only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+    body {
+        cursor: none;
+    }
+}
+
+/* Notebook Grid Background */
+.grid-bg {
+    background-color: #FFF9F5;
+    background-image: linear-gradient(#FCD5CE 1px, transparent 1px), linear-gradient(90deg, #FCD5CE 1px, transparent 1px);
+    background-size: 30px 30px;
+}
+
+.blob-shape {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+}
+
+htm// main.js full code too long; placeholder created.
 // I can insert full code if you want.
